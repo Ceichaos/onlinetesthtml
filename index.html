@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">	
+<!-- 引入 layui.css -->
+<link rel="stylesheet" href="layui-v2.6.8/layui/css/layui.css">
+<!-- 引入 layui.js -->
+<script src="layui-v2.6.8/layui/layui.js"></script>
+<script src="http://www.yanhuangxueyuan.com/versions/threejsR92/build/three.js"></script>
+<script src="js/three.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/OrbitControls.js"></script>
+<title>MY</title>
+<style>
+body {
+    width: 1920px;
+    height: 1080px;
+    background-image: url("imge/背景.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+	margin: 0;
+}
+	.layui-nav{
+    background-color: rgb(0,0,0,0);
+    position: absolute;
+    top: 28px;
+    width: 1524px;
+    height: 400px;
+	}
+	#poster{
+		visibility: visible;
+	}
+	.layui-nav .layui-this:after, .layui-nav-bar {
+    content: "";
+    
+     
+   
+    background-image: linear-gradient(90deg, rgb(206,116,58), rgb(253,221,126),rgb(255,247,175));
+    /* background-color: #500078; */
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    pointer-events: none;
+	background-color: rgb(0,0,0,0);
+}
+	.layui-nav .layui-nav-item a {
+	font-family: PangMenZhengDao-3;
+    font-weight: 400;
+    color: #E6E6E6;
+    line-height: 50px;
+    text-shadow: 0px 2px 9px rgba(255, 163, 78, 0.1);
+    -webkit-text-stroke: 1px rgba(255, 163, 78, 0.5);
+    text-stroke: 1px #FFA34D;
+	}
+	
+	.layui-video{
+    width: 310px;
+    height: 200px;
+		object-fit: fill;
+    margin-top: 100px;
+    margin-left: 1570px;
+		position: absolute;
+	}
+
+	.xuanzhan1{
+    width: 222px;
+    height: 222px;
+    margin-top: 100px;
+    margin-left: 1620px;
+    z-index: 1;
+	}
+	.layui-img1{
+		z-index: 1; 
+		margin-top:600px;
+		margin-left: 86p;
+		width: auto;
+		height: auto;
+	}
+	.layui-img2{
+		z-index: 1;
+		margin-left: 627px;
+		margin-top: 600px;
+		width: auto;
+		height: auto;
+	}
+	.layui-img3{
+    width: 144px;
+    height: 48px;
+    margin-top:  -358px;
+    margin-left:  36px;
+    z-index: 1;
+	}
+	.layui-wenzi1{
+		position: absolute;
+    width: 270px;
+    height: 40px;
+    font-size: 40px;
+    font-family: YouSheBiaoTiHei;
+    font-weight: 400;
+    color: #E6E6E6;
+    line-height: 50px;
+   margin-left: -2vw;
+    top: 0px;
+    left: 213px;
+	 }
+	.layui-body2{
+		position: absolute;
+		top: 150px;
+		left: 150px;
+	}
+	.layui-body3{
+    position: absolute;
+    width:13in;
+    top: 850px;
+    left: 80px;
+    height: 230px;
+	}
+	.layui-wenzi2{
+	width: auto;
+	height: auto;
+	font-size: 40px;
+	font-family: PangMenZhengDao-3;
+	font-weight: 400;
+	color: #E6E6E6;
+	line-height: 50px;
+	}
+	.layui-wenzi3{
+		position: absolute;
+		top: 150px;
+		left: 150px;
+	width: auto;
+	height: auto;
+	font-size: 40px;
+	font-family: PangMenZhengDao-3;
+	font-weight: 400;
+	color: #E6E6E6;
+	line-height: 50px;
+	}
+	.layui-nav * {
+    font-size: 26px;
+}
+	.layui-body1{
+		position:absolute;
+		top: 30px;
+		left: 30px;
+		
+	}
+
+#display {
+	width: 20vw;
+	
+}
+
+</style>
+</head>
+<body style="position: absolute">
+	<ul class="layui-nav " lay-filter="" >
+	  <li class="layui-nav-item" style="margin-left: 650px"><a href="">首页</a></li>
+	  <li class="layui-nav-item"><a href="">车型展示</a></li>
+	  <li class="layui-nav-item"> <a href="javascript:;">参数详情</a>
+	    <dl class="layui-nav-child" style="background-color:#333333">
+	      <!-- 二级菜单 -->
+	      <dd><a href="">整车参数</a></dd>
+	      <dd><a href="">相关配件</a></dd>
+        </dl>
+      </li>
+	  <li class="layui-nav-item"><a href="">预约服务</a></li>
+	  <li class="layui-nav-item"><a href="">联系我们</a></li>
+</ul>
+<div class="layui-body1"><img src="imge/图标.png" alt="" >
+  <p  class="layui-wenzi1" >第七代科迈罗&nbsp;</p>
+</div>
+<div class="layui-body2">
+  <p class="layui-wenzi2" style="margin-left: 20px">酷炫来袭&nbsp;</p>
+  <p class="layui-wenzi2" style="margin-top: 30px">$400,000&nbsp;</p>
+</div>
+<div class="layui-body3">
+  <p class="layui-wenzi2">参数配置</p>
+  <div class="layui-col-md5">
+    <div class="layui-col-md3" style="margin-top: 10px"> <img src="imge/引擎2.png" alt="" width="180px" height="137px" ></div>
+    <div class="layui-col-md3" style="margin-left: 90px" >
+        <p class="layui-wenzi2" style="margin-left: 110px">2.0T&nbsp;</p>
+        <p class="layui-wenzi2" style="width: 290px; text-align: center">高性能涡轮增压直喷发动机&nbsp;</p>
+      </div>
+	  </div>
+	<div class="layui-col-md6">
+      <div class="layui-col-md3" style=""><img  style="width:auto;margin-top: 15px;margin-left: 30px"src="imge/变速箱2.png" alt=""  /></div>
+      <div class="layui-col-md3" style="margin-left: 50px">
+        <p class="layui-wenzi2" style="margin-left: 50px">8速&nbsp;</p>
+        <p class="layui-wenzi2" style="width: 170px;text-align: center">手自一体变速箱&nbsp;</p>
+      </div>
+    </div> 
+ </div>
+<p class="layui-wenzi2" style="position: absolute; top: 30px;left: 1630px">发售倒计时&nbsp;</p>
+<img class="xuanzhan1" src="imge/旋转特效制作.png" alt="" >
+<div>
+<p class="layui-wenzi2" style="position: absolute;left: 1690px;top: 185px;font-size: 25px">7 DAY&nbsp;</p>
+	</div>
+	
+<video id="video" class="layui-video"  poster="imge/组 1.png" ><source src="imge/video.mp4" type="video/mp4"></video>
+	<img  id="video2" class="layui-video" src="imge/矩形 4 拷贝.png"/>
+	<div id="poster" ><img src="imge/播放.png" style="position: absolute;left: 1695px;margin-top: 170px;width: 60px;height: 60px" /></div>
+
+	<div id="earth" style="position: absolute;z-index: 10;top: 10px;mix-blend-mode: screen;" >
+		
+	</div>
+
+<script type="text/javascript">
+//注意：导航 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element;
+  
+  
+});
+	
+      var video = document.getElementById("video");
+      var poster=document.getElementById("poster");
+	var video2=document.getElementById("video2");
+    poster.onclick=function play(){
+ document.getElementById("poster").style.visibility="hidden";
+  
+ video.play();
+} 
+    video2.onclick=function pause(){
+       document.getElementById("poster").style.visibility="visible";
+ video.pause();
+    }
+   
+
+
+
+
+   
+	var loader = new THREE.FileLoader();
+			var dow = document.getElementById("earth");
+			loader.load( 'app.json', function ( text ) {
+
+				var player = new APP.Player();
+				player.load( JSON.parse( text ) );
+				player.setSize( window.innerWidth, window.innerHeight);//窗口大小
+				player.play();
+
+				document.body.appendChild( player.dom );
+                
+				//预留屏幕适配
+				window.addEventListener( 'resize', function () {
+					player.setSize( window.innerWidth, window.innerHeight );
+					// player.setSize( window.innerWidth, window.innerHeight );
+				} );
+
+			} );
+</script>
+      
+</body>
+</html>
